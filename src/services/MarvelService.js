@@ -31,6 +31,15 @@ class MarvelService {
       wiki: char.urls[1].url
     }
   }
+  setImgStyle = (thumbnail) => {
+    let imgStyle = { 'objectFit': 'cover' };
+    if (thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
+      imgStyle = { 'objectFit': 'unset' };
+    }
+
+    return imgStyle;
+  }
+
 }
 
 export default MarvelService;
